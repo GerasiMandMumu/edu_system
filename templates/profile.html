@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+		<title>Пользователь</title>
+	</head>
+
+<body>
+
+	<div class="header">
+		<div class="logo">
+			<img src="{% static 'images/trud.png' %}" class="logo_size" />	
+		</div>
+		
+		<div class="user">
+			<details class="user-head">
+			<summary>{{profile.name}}</summary>
+				<div><a class="user-it" href="/welcome">Главная</a></div>
+				<div><a class="user-it" href="/profile">Профиль</a></div>
+				<div><a class="user-it" href="/settings">Настройки</a></div>
+				<div><a class="user-it" href="/exit">Выход</a></div>
+			</details>	
+		</div>
+	</div>
+	
+	<div class="main">
+		<div class="content">
+			<p>По данным Всемирной организации здравоохранения индивидуальная продолжительность жизни человека во многом связана с условиями его жизнедеятельности. Опасности подстерегают человека на каждом шагу: при взаимодействии с природной средой, на производстве, в быту, в социальной сфере. Всегда надо знать и помнить, что все воздействует на все и что любая опасность носит потенциальный характер, которая может негативно проявиться в любое время.</p> 
+			<p>Курс «Безопасность жизнедеятельности». Он предназначен для формирования у учащихся сознательного отношения к вопросам личной безопасности и безопасности окружающих; привития основополагающих знаний и умений распознавать и оценивать опасные ситуации и вредные факторы среды обитания человека, определять способы защиты от них, а также ликвидировать последствия и оказывать само- и взаимопомощь в случаях проявления любых опасностей.</p>
+		</div>
+		<div class="button-div">
+			<form method="" action="content">
+				<input class="button" type="submit" value="Продолжить обучение">
+			</form>
+		</div>
+	</div>
+	
+	<div class="footer">
+        <p>Copyright © all rights reserved, 2020</p>
+    </div>
+
+</body>
+</html>
+
+
+
+
+

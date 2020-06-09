@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/docs.css' %}" />
+    <title>Охрана труда и жизнедеятельности</title>
+</head>
+<body>
+	<div class="header">
+		<div class="logo">
+			<img src="{% static 'images/trud.png' %}" class="logo_size" />
+		</div>	
+		<div class="title">
+			<h1>Охрана труда и жизнедеятельности</h1>
+		</div>
+	</div>
+	
+	<div class="main">
+		<div class="rules-title">
+			<h2>{{docs.title}}</h2>    	
+		</div>
+		<div class="content">
+			<p>{{docs.content}}</p>	
+		</div>
+	</div>
+	
+	<div class="footer">
+        <p>Copyright © all rights reserved, 2020</p>
+    </div>
+	
+</body>
+</html>

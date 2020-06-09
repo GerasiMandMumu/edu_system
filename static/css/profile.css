@@ -1,0 +1,66 @@
+html *{
+   font-family: TREBUCHET MS;
+}
+
+/*Header*/
+
+.logo {
+	width: 7%; 
+	height: 10%; 	
+	display:inline-block;
+}
+.logo_size{
+	width:100%;
+}
+.user{
+	position:absolute;
+	top: 5%;
+	left:83%;
+	display:inline-block;
+}
+.user-head summary::-webkit-details-marker { 
+	display: none;
+}
+.user-head summary{
+	outline-style: none;
+	cursor:pointer;
+}
+.user-it{
+	color:#148509;
+	text-decoration: none;
+}
+.user-it:hover{
+	color:#00e600;
+}
+
+
+/*Main*/
+.main{
+	margin-bottom:13%;
+}
+.content{
+	margin-left:20%;
+	width:60%;
+}
+.button{
+	cursor:pointer;
+	font-size:140%;
+	border-radius:45%;
+	margin-top:3%;
+	margin-left:35%;
+	width:26%;
+	height:50px;
+	outline:none;
+}
+.button:hover{
+	background-color:#e6e6e6;
+}
+
+/*Footer*/
+
+.footer{ 
+    border-top: 1px solid #ccc;
+    font-size: 85%;    
+    text-align: center;
+    margin: 0 auto;
+}

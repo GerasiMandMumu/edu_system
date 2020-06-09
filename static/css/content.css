@@ -1,0 +1,91 @@
+html *{
+   font-family: TREBUCHET MS;
+}
+
+/*HEADER*/
+
+.header{
+	height:60px;
+}
+.logo {
+	position:absolute;
+	width: 7%; 
+	height: 10%; 	
+	display:inline-block;
+}
+.logo_size{
+	width:100%;
+}
+.user{
+	position:absolute;
+	top: 5%;
+	left:83%;
+	display:inline-block;
+}
+.user-head summary::-webkit-details-marker { 
+	display: none;
+}
+.user-head summary{
+	outline-style: none;
+	cursor:pointer;
+}
+.user-it{
+	color:#148509;
+	text-decoration: none;
+}
+.user-it:hover{
+	color:#00e600;
+}
+
+
+/*MAIN*/
+
+.title{
+	font-size:200%;
+	margin-left:40%;
+}
+.content{
+	margin-top:0.5%;
+}
+.module-head summary{
+	margin-left:36%;
+	width:80%;
+	border: 2px solid #ccc;
+	font-size:150%;
+	outline-style: none;
+	cursor:pointer;
+}
+.module-head summary::-webkit-details-marker { 
+	display: none;
+}
+.nav{
+	text-align:center;
+	margin-right:39%;
+	margin-bottom:0.5%;
+}
+.lesson-div{
+	padding:1%;
+	margin-left:40%;
+	width:70%;
+	border: 1px solid #ccc;
+}
+.lesson-div:hover{
+	background-color:#f5f5f5;
+}
+.lesson{
+	display: block;
+	font-size:110%;
+	color:#148509;
+	text-decoration: none;
+}
+
+
+/*FOOTER*/
+
+.footer{ 
+	bottom:2%;
+	left:40%;
+	position:absolute;
+    font-size: 85%;    
+    text-align: center;
+}

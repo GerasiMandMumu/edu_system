@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="{% static 'css/contacts.css' %}" />
+    <title>Охрана труда и жизнедеятельности</title>
+</head>
+<body>
+	
+	<div class="header">
+		<div class="logo">
+			<img src="{% static 'images/trud.png' %}" class="logo_size" />
+		</div>
+		<div class="address">
+			<h3 align="center">Наш адрес</h3>
+			<h4 align="center">248600, г. Калуга, пл. Старый торг, д. 9/10</h4>	
+		</div>
+	</div>
+	
+	
+	<div class="main">
+		
+		<div class="phones">
+			<h4>Телефоны для связи:</h4>
+			<p>Приемная директора: +7 (4842) 56-35-89 (телефон/факс)</p>
+			<p>Бухгалтерия: +7 (4842) 57-45-34</p>
+			<p>Отдел полиграфии: +7 (4842) 57-51-14</p>
+			<p>Услуги по проведению семинаров: +7 (4842) 57-80-11</p>
+			<p>Патентно-лицензионные услуги: +7 (4842) 57-50-90, +7 (4842) 59-51-85</p>
+			<p>Центр правовой информации: +7 (4842) 57-53-00</p>
+			<p>Электронные библиотеки: +7 (4842) 57-12-54</p>
+		</div>
+		
+		<div class="map">
+			<h4>Схема проезда:</h4>
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8dcd14b867a71c1db9942e195809222e688da1daddd709aa3a2112b133aca7fa&amp;source=constructor" width="520" height="350" frameborder="0"></iframe>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<div><a href="mailto:40cnti@rosenergo.gov.ru">Email: 40cnti@rosenergo.gov.ru</a></div>
+    </div>
+		
+</body>
+</html>

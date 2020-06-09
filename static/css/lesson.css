@@ -1,0 +1,119 @@
+html *{
+   font-family: TREBUCHET MS;
+}
+input{
+	outline:none;
+}
+/*Header*/
+.header{
+	height:60px;
+}
+.logo {
+	position:absolute;
+	width: 7%; 
+	height: 10%; 	
+	display:inline-block;
+}
+.logo_size{
+	width:100%;
+}
+.user{
+	position:absolute;
+	top: 5%;
+	left:84%;
+	display:inline-block;
+}
+.user-head summary::-webkit-details-marker { 
+	display: none;
+}
+.user-head summary{
+	outline-style: none;
+	cursor:pointer;
+}
+.user-it{
+	color:#148509;
+	text-decoration: none;
+}
+.user-it:hover{
+	color:#00e600;
+}
+
+/*MAIN*/
+
+.main{
+	height:480px;
+}
+
+/*SIDEBAR*/
+
+.side, .test{
+	margin-top:60px;
+	display:inline-block;
+}
+.wrapper-1, .wrapper-2, .wrapper-3{
+	margin-top:10px;
+	padding:4px;
+	width:200px;
+	border:1px solid #ccc;
+}
+.lesson-nav{
+	border:1px solid #ccc;
+}
+.wrapper-1 a:hover, .wrapper-2 a:hover, .wrapper-3 a:hover{
+	color:#00e600;
+}
+.lesson-nav:hover{
+	background-color:#fff0f5;
+}
+a{
+	display: block;
+	color:#148509;
+	text-decoration: none;
+}
+
+/*TEST*/
+.test{
+	margin-left:100px;
+	vertical-align:top;
+}
+.test div{
+	padding:10px;
+}
+.button{
+	cursor:pointer;
+	border:1px solid #ccc;
+	border-radius:5px;
+	height:25px;
+	width:400px;
+}
+.button:hover{
+	background-color:#9df794;
+}
+
+
+
+/*COMMENT*/
+textarea{
+	resize:none;
+}
+.user-com{
+  display: inline-block;
+  color:green;
+}
+.date-com{
+  display: inline-block;
+  color:green;
+  margin-left:200px;
+}
+.comment-com{
+  margin-top:10px;
+}
+.commit-comment:hover{
+  background-color:green;
+}
+.comment{
+	margin-left:250px;
+}
+.old-comment{
+	margin-top:20px;
+}

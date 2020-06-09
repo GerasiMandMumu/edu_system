@@ -1,0 +1,54 @@
+html *
+{
+   font-family: TREBUCHET MS;
+}
+
+/*HEADER*/
+
+.logo {
+	width: 7%; 
+	height: 10%;
+}
+.logo_size{
+	width:100%;
+}
+
+/*MAIN*/
+.main{
+	margin-bottom:4%;
+}
+.title{
+	margin-bottom:1%;
+}
+input{
+	margin-bottom:1%;
+	border:1px solid #ccc;
+	height:23px;
+	width:20%;
+	margin-left: 40%;
+	outline:none;
+}
+.btn{
+	cursor:pointer;
+	font-size:150%;
+	height:20%;
+	background-color:#00b300;
+}
+.btn:hover{
+	background-color:green;
+}
+.error{
+	position:absolute;
+	left:40%;
+	top:80%;
+}
+
+/*FOOTER*/
+
+.footer{ 
+    border-top: 1px solid #ccc;
+    font-size: 85%;    
+    text-align: center;
+    margin: 0 auto;
+}
+

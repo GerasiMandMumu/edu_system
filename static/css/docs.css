@@ -1,0 +1,36 @@
+html * {
+   font-family: TREBUCHET MS;
+}
+
+/*HEADER*/
+
+.logo {
+	position:absolute;
+	width: 7%; 
+	height: 10%; 	
+}
+.logo_size{
+	width:100%;
+}
+.title{
+	margin-left:30%;
+}
+.logo, .title{
+	display:inline-block;
+}
+
+/*MAIN*/
+.rules-title{
+	margin-left:20%;
+}
+
+
+
+/*FOOTER*/
+
+.footer{ 
+    border-top: 1px solid #ccc;
+    font-size: 85%;    
+    text-align: center;
+    margin: 0 auto;
+}
