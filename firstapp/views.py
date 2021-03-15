@@ -1,11 +1,9 @@
-from django.shortcuts import render
-from django.http import HttpResponseNotFound
+from django.shortcuts import render, redirect
+from django.http import HttpResponseNotFound, HttpResponse
 from .models import Step, Documents, Company, Profile
 from django.core import validators
 from django.core.exceptions import ValidationError
-from django.http import HttpResponse
 from django.contrib.auth import authenticate
-from django.http import HttpResponse
 
 
 #старт
@@ -22,7 +20,7 @@ def read_data(request):
 # ГЛАВНАЯ СТРАНИЦА
 # главная
 def welcome(request):
-	return render(request, "welcome.html")
+	return redirect(index)
 # контакты
 def contacts(request):
 	return render(request, "contacts.html")
@@ -32,11 +30,11 @@ def about(request):
 # начать учиться	
 def start(request):
 	if read_data(request):
-		s = request.session["login"]
-		profile = Profile.objects.get(login=s)
-		return render(request, "profile.html", {"profile": profile})
+		#s = request.session["login"]
+		#profile = Profile.objects.get(login=s)
+		return redirect(profile)
 	else:
-		return render(request, "login.html")
+		return redirect(login_window)
 # документ
 def get_document(request, id):
 	docs = Documents.objects.get(id=id)
@@ -59,9 +57,9 @@ def exit(request):
 	try:
 		del request.session["login"]
 		del request.session["password"]
-		return render(request, "welcome.html")
+		return redirect(welcome)
 	except:
-		return render(request, "welcome.html")
+		return redirect(welcome)
 # изменение данных профиля
 def edit(request, id):
 	try:
@@ -73,7 +71,7 @@ def edit(request, id):
 			profile.patronymic = request.POST.get("patronymic")
 			profile.email = request.POST.get("email")
 			profile.save()
-			return render(request, "settings.html", {"profile": profile})
+			return redirect(settings)
 	except:
 		return HttpResponseNotFound("<h2>Ошибка</h2>")	
 
@@ -82,7 +80,7 @@ def edit(request, id):
 # содержание курса
 def content(request):
 	s = request.session["login"]
-	profile = Profile.objects.get(login=s).person_id
+	profile = Profile.objects.get(login=s)
 	return render(request, "content.html", {"profile": profile})
 # страница с тестом
 def step(request, id):
@@ -96,17 +94,13 @@ def step(request, id):
 # для отображения окна авторизации
 def login_window(request):
 	if read_data(request):
-		s = request.session["login"]
-		profile = Profile.objects.get(login=s)
-		return render(request, "profile.html", {"profile": profile})
+		return redirect(profile)
 	else:
 		return render(request, "login.html")
 # для отображения окна регистрации	
 def register_window(request):
 	if read_data(request):
-		s = request.session["login"]
-		profile = Profile.objects.get(login=s)
-		return render(request, "profile.html", {"profile": profile})
+		return redirect(profile)
 	else:
 		return render(request, "register.html")
 # вход 
@@ -115,14 +109,14 @@ def login(request):
 		if request.method == "POST":
 			input_login = request.POST.get("login")
 			input_password = request.POST.get("password")
-			profile = Profile.objects.get(login=request.POST.get("login"))
-			base_login = profile.login
-			base_password = profile.password
+			prof = Profile.objects.get(login=request.POST.get("login"))
+			base_login = prof.login
+			base_password = prof.password
 			if base_login == input_login and base_password == input_password:
 				request.session["login"] = base_login
 				request.session["password"] = base_password
-				profile = Profile.objects.get(login=base_login)
-				return render(request, "profile.html", {"profile": profile})
+				prof = Profile.objects.get(login=base_login)
+				return redirect(profile)
 			else:
 				return HttpResponse("<h2>Неверные данные</h2>")
 	except:
@@ -146,7 +140,6 @@ def register(request):
 			else:
 				company = Company()
 				company.company_title = title
-				company.save()
 				profile.company = company
 				
 			profile.login = request.POST.get("login")
@@ -161,9 +154,10 @@ def register(request):
 			# Шаг
 			step = Step.objects.get(id=1)
 			profile.current_step = step
-
+			
+			company.save()
 			profile.save()
-			return render(request, "welcome.html")	
+			return redirect(welcome)	
 	except:
 		return render(request, "register.html", {"msg": "Ошибка"})
 	

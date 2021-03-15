@@ -38,7 +38,6 @@ html * {
 }
 .input button{
 	cursor:pointer;
-	border-radius:48%;
 	font-size:110%;
 	text-align:center;
 	border:1px solid #ccc;
@@ -86,7 +85,6 @@ html * {
 }
 .study {
 	cursor:pointer;
-	border-radius:48%;
 	font-size:250%;
 	height:52pt;
 	width: 80%;
